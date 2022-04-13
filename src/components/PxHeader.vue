@@ -27,6 +27,10 @@
           </ul>
         </li>
       </ul>
+      <div id="LOGIN" class="d-flex m-3">
+        <router-link to="/registro">Registrate</router-link>
+        <router-link to="/login">Inicia Sesión</router-link>
+      </div>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-dark" type="submit">Buscar</button>
@@ -38,6 +42,7 @@
 </template>
 <script>
 export default {
+  
     name: 'PxHeader',
     data(){
         return{
@@ -51,8 +56,5 @@ export default {
 }
 </script>
 <style scoped>
-*{
-  margin: 0;
-  padding: 0;
-}
+
 </style>
