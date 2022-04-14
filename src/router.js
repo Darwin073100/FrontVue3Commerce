@@ -3,6 +3,7 @@ import Home from '@/views/ViewHome.vue';
 import Login from '@/views/admin/ViewLogin.vue';
 import Registro from '@/views/admin/ViewRegistro';
 import Error from '@/views/error/ViewError.vue';
+import Producto from '@/views/admin/ViewProd';
 
 const routes = [
     {
@@ -26,6 +27,11 @@ const routes = [
         name: 'ViewError',
         component: Error
     },
+    {
+        path: '/admin/producto',
+        name: 'ViewProd',
+        component: Producto
+    }
 ];
 
 const router = createRouter({

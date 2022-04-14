@@ -1,6 +1,6 @@
 <template>
 <header>
-<nav class="navbar navbar-expand-lg navbar-light bg-success">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">GAED</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,17 +19,17 @@
             PRODUCTOS
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Sitios Web</a></li>
-            <li><a class="dropdown-item" href="#">Sistemas De Información</a></li>
-            <li><a class="dropdown-item" href="#">Sistemas De Información</a></li>
+            <div v-for="nav in nav" :key="nav.name">
+              <li><router-link class="dropdown-item" to="">{{ nav.name }}</router-link></li>
+            </div>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Todo</a></li>
           </ul>
         </li>
       </ul>
-      <div id="LOGIN" class="d-flex m-3">
-        <router-link class="me-2" to="/registro">Registrate</router-link>
-        <router-link to="/login">Inicia Sesión</router-link>
+      <div id="LOGIN" class="d-flex">
+        <router-link class="me-2 text-dark" to="/registro">Registrate</router-link>
+        <router-link class="me-2 text-dark" to="/login">Inicia Sesión</router-link>
       </div>
       <form class="d-flex">
         <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
@@ -47,9 +47,10 @@ export default {
     data(){
         return{
           nav:[
-            {name: 'INICIO', url: '#'},
-            {name: 'INICIO', url: '#'},
-            {name: 'INICIO', url: '#'}
+            {name: 'Sitios Web', url: ''},
+            {name: 'S. De Información', url: '#'},
+            {name: 'Prototipos', url: '#'},
+            {name: 'Apps para Movil', url: '#'}
           ]
         }
     }
