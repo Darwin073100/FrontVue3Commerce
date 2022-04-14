@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+          <router-link class="nav-link active" aria-current="page"  to="/">INICIO</router-link>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">PEDIDO</a>
@@ -28,11 +28,11 @@
         </li>
       </ul>
       <div id="LOGIN" class="d-flex m-3">
-        <router-link to="/registro">Registrate</router-link>
+        <router-link class="me-2" to="/registro">Registrate</router-link>
         <router-link to="/login">Inicia Sesión</router-link>
       </div>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-dark" type="submit">Buscar</button>
       </form>
     </div>

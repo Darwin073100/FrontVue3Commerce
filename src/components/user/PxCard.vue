@@ -1,6 +1,6 @@
 <template>
-  <div class="container" v-for="p in bd" v-bind:key="p.id">
-    <div class="card">
+  <div class="col" v-for="p in bd" v-bind:key="p.id">
+    <div class="card m-2">
       <div class="card-header">
         <span class="h3">{{p.nombre}}</span>
       </div>

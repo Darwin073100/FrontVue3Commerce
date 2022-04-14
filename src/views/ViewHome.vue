@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <span class="h2">Contenido Mas Popular</span>
-        <div class="col">
+        <div class="row">
             <px-card/>
         </div>
     </div>
