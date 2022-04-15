@@ -29,7 +29,6 @@ export default {
   mounted(){
     this.bdProducto.getAll().then(data =>{
       this.productos = data.data;
-      console.log(data);
     });
   }
 

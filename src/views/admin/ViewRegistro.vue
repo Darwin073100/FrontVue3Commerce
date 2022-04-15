@@ -8,32 +8,74 @@
             <div class="card-body">
                 <div class="form-group row">
                     <div class="col">
-                        <label for=""><strong>Nombre:</strong></label>
-                        <input type="text" class="form-control">
+                        <label for="txtNombre"><strong>Nombre:</strong></label>
+                        <input type="text" class="form-control" v-model="cliente.nombre" id="txtNombre">
                         <label><strong>Apellidos:</strong></label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" v-model="cliente.apellidos">
                         <label for=""><strong>Correo Electronico:</strong></label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control" v-model="cliente.email">
+                        <label for=""><strong>Nombre De Usuario:</strong></label>
+                        <input type="text" class="form-control" v-model="usuario.userName">
+                        <label for=""><strong>Contraseña:</strong></label>
+                        <input type="password" class="form-control">
+                        <label for=""><strong>Confirma Tu Contraseña:</strong></label>
+                        <input type="password" class="form-control" v-model="usuario.password">
                     </div>
                     <div class="col">
                         <label for=""><strong>Clave De Tu País:</strong></label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" v-model="cliente.clave">
                         <label for=""><strong>Telefono:</strong></label>
-                        <input type="tel" class="form-control">
+                        <input type="tel" class="form-control" v-model="cliente.telefono">
                         <label for=""><strong>Direccion</strong></label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" v-model="cliente.direccion">
                     </div>
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="submit" class="btn btn-primary" v-on:click="save">Registrar</button>
             </div>
         </div>
     </div>
     </div>
 </template>
 <script>
+import BDCliente from '@/services/BDCliente'
+import BDUser from '@/services/BDUser';
 export default {
-    name: 'ViewRegistro'
+    name: 'ViewRegistro',
+    data(){
+        return{
+            cliente:{
+                id: null,
+                nombre: null,
+                apellidos: null,
+                email: null,
+                clave: null,
+                telefono: null,
+                noCompras: 0,
+                direccion: null,
+                idUser: null
+            },
+            usuario:{
+                id: null,
+                userName: null,
+                password: null
+            }
+        }
+    },
+    bdCliente: null,
+    bdUser: null,
+    created(){
+        this.bdCliente = new BDCliente();
+        this.bdUser = new BDUser();
+    },
+
+    methods:{
+        save(){
+            this.bdUser.save(this.usuario).then(data => {
+                console.log(data)
+            });
+        }
+    }
 }
 </script>

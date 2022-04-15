@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export default class BDProducto{
+export default class BDTrabajador{
      URL = "http://localhost:8090/trabajador/";
 
      getAll(){
