@@ -2,7 +2,7 @@
   <div class="col" v-for="p in productos" v-bind:key="p.id">
     <div class="card m-2">
       <div class="card-header">
-        <span class="h3">{{p.nombre}}</span>
+        <span class="h3">{{ p.nombre }}</span>
       </div>
       <div class="card-body center">
         <img src="./logo.png" :alt="p.nombre" />
@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import BDProducto from '../../services/BDProducto';
+import BDProducto from "../../services/BDProducto";
 export default {
   name: "PxCard",
   data() {
@@ -22,15 +22,14 @@ export default {
       productos: null,
     };
   },
-  bdProducto : null,
-  created(){
-    this.bdProducto = new BDProducto(); 
+  bdProducto: null,
+  created() {
+    this.bdProducto = new BDProducto();
   },
-  mounted(){
-    this.bdProducto.getAll().then(data =>{
+  mounted() {
+    this.bdProducto.getAll().then((data) => {
       this.productos = data.data;
     });
-  }
-
+  },
 };
 </script>
