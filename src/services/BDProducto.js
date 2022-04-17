@@ -6,4 +6,7 @@ export default class BDProducto{
      getAll(){
          return axios.get(this.URL);
      }
+     save(producto){
+         return axios.post(this.URL, producto);
+     }
 }
