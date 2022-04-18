@@ -6,8 +6,9 @@
                 <span class="h2">Registro</span>
             </div>
             <div class="card-body">
-                <div class="form-group row">
-                    <div class="col">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
                         <label for="txtNombre"><strong>Nombre:</strong></label>
                         <input type="text" class="form-control" v-model="cliente.nombre" id="txtNombre">
                         <label><strong>Apellidos:</strong></label>
@@ -29,10 +30,11 @@
                         <label for=""><strong>Direccion</strong></label>
                         <input type="text" class="form-control" v-model="cliente.direccion">
                     </div>
+                    </div>
                 </div>
             </div>
             <div class="card-footer">
-                <button type="submit" class="btn btn-primary" v-on:click="save">Registrar</button>
+                <button type="submit" class="btn btn-primary" v-on:click="save()">Registrar</button>
             </div>
         </div>
     </div>
@@ -57,7 +59,8 @@ export default {
                 idUser: null
             },
             usuario:{
-                id: null,
+                id: 5,
+                tipo: 'CLIENTE',
                 userName: null,
                 password: null
             }
@@ -72,6 +75,7 @@ export default {
 
     methods:{
         save(){
+            console.log('USUARIO')
             this.bdUser.save(this.usuario).then(data => {
                 console.log(data)
             });

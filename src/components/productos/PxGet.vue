@@ -47,24 +47,24 @@
     </div> 
 </template>
 <script>
-import  BDProducto from "@/services/BDProducto";
+
 export default {
     name:'PxGet',
     data() {
     return {
-      productos: null,
+      productos: [],
     };
   },
   
   bdProducto: null,
   created() {
-    this.bdProducto = new BDProducto();
+    
   },
   mounted() {
-    this.bdProducto.getAll().then((data) => {
-      this.productos = data.data;
-      console.log(data);
-    });
+    fetch('http://localhost:8090/producto/')
+    .then((res)=> res.json())
+    .then(data => this.productos = data)
+    .catch(err => console.log(err.message))
   },
   methods: {},
 }

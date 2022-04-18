@@ -6,11 +6,6 @@
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <label for="">Tipo De Usuario</label>
-                    <select class="form-control">
-                        <option value="1"><strong>Cliente</strong></option>
-                        <option value="2"><strong>Administrador</strong></option>
-                    </select>
                     <label>Nombre de usuario:</label>
                     <input type="text" class="form-control">
                     <label>Contraseña:</label>
@@ -25,6 +20,6 @@
 </template>
 <script>
 export default {
-    
+    name: 'ViewLogin'
 }
 </script>

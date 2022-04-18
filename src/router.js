@@ -1,9 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/views/ViewHome.vue';
-import Login from '@/views/admin/ViewLogin.vue';
-import Registro from '@/views/admin/ViewRegistro';
+import Login from '@/views/user/ViewLogin.vue';
+import Registro from '@/views/user/ViewRegistro';
 import Error from '@/views/error/ViewError.vue';
-import Producto from '@/views/admin/ViewProd';
+import Producto from '@/views/admin/product/ViewProd';
+import LoginAdmin from '@/views/admin/login/ViewLoginAdmin';
 
 const routes = [
     {
@@ -23,7 +24,7 @@ const routes = [
         component: Registro
     },
     {
-        path: '/*',
+        path: '/**',
         name: 'ViewError',
         component: Error
     },
@@ -31,6 +32,11 @@ const routes = [
         path: '/admin/producto',
         name: 'ViewProd',
         component: Producto
+    },
+    {
+        path: '/admin',
+        name: 'ViewLoginAdmin',
+        component: LoginAdmin
     }
 ];
 

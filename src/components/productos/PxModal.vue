@@ -113,7 +113,7 @@
             <input
               type="submit"
               class="btn btn-primary"
-              @:click="save()"
+              v-on:click="save()"
               value="Guardar"
             />
           </div>
@@ -148,15 +148,21 @@ export default {
   },
   methods: {
     save() {
-      this.bdProducto
-        .save(this.producto)
+      this.bdProducto.save(this.producto)
+        .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+          console.log("Success:", data);
         })
-        .catch((error) =>{
-          console.log(error);
+        .catch((error) => {
+          console.error("Error:", error);
         });
     },
+    getAll(){
+      fetch('http://localhost:8090/producto/')
+    .then((res)=> res.json())
+    .then(data => this.productos = data)
+    .catch(err => console.log(err.message))
+    }
   },
 };
 </script>
