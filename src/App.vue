@@ -1,22 +1,22 @@
 <template>
-     <div class="">
-       <px-header/>
-     <router-view/>
-     </div>
+  <div class="">
+    <px-header />
+    <router-view />
+    <px-footer/>
+  </div>
 </template>
 
 <script>
-import PxHeader from './components/PxHeader.vue'
+import PxFooter from "./components/PxFooter.vue";
+import PxHeader from "./components/PxHeader.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    PxHeader
-
-  }
-}
+    PxHeader,
+    PxFooter,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

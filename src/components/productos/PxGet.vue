@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-      <div class="col" v-for="p in productos" v-bind:key="p.id">
+      <div class="col-sm-3" v-for="p in productos" v-bind:key="p.id">
         <div class="card m-1 bg-primary">
           <div class="card-header bg-dark text-white">
             <span class="h3">{{ p.nombre }}</span>
@@ -27,6 +27,9 @@
                 </li>
                 <li class="list-group-item">
                   <strong>Estado: </strong>{{ p.estado }}
+                </li>
+                <li class="list-group-item">
+                  <strong>Imagen: </strong>{{ p.imagen }}
                 </li>
                 <li class="list-group-item">
                   <strong>Descripción: </strong>{{ p.descripcion }}

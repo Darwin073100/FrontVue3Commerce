@@ -50,10 +50,10 @@
               />
               <label for="txtTipo">Tipo De Software:</label>
               <select class="form-control" id="txtTipo" v-model="producto.tipo">
-                <option value="1"><strong>Sitio Web</strong></option>
-                <option value="2"><strong>S. De Información</strong></option>
-                <option value="2"><strong>App Movil</strong></option>
-                <option value="2"><strong>Prototipo</strong></option>
+                <option value="Sitio Web"><strong>Sitio Web</strong></option>
+                <option value="S. De Información"><strong>S. De Información</strong></option>
+                <option value="App Movil"><strong>App Movil</strong></option>
+                <option value="Prototipo"><strong>Prototipo</strong></option>
               </select>
               <label for="txtEstado">Estado:</label>
               <input
@@ -133,7 +133,7 @@ export default {
         nombre: null,
         tipo: null,
         estado: null,
-        imagen: null,
+        imagen: this.id+'-Product.png',
         precio: null,
         consumo: null,
         fecha: null,

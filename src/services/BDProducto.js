@@ -17,7 +17,7 @@ export default class BDProducto {
 
     upDate(id, producto) {
         return fetch(this.URL + id, {
-            method: "PUT", // or 'PUT'
+            method: "PUT", // or 'POST'
             headers: {
                 "Content-Type": "application/json",
             },
@@ -26,10 +26,14 @@ export default class BDProducto {
     }
 
     delete(id){
-        return fetch(this.URL+id,{
+        fetch(this.URL+id,{
             method: "DELETE"
         })
     }
 
+    //--------imagenes-----------
+    getImg(id) {
+        return fetch(this.URL+'image/'+id);
+    }
 
 }

@@ -1,13 +1,35 @@
-import axios from 'axios';
+export default class BDUser {
+    URL = "http://localhost:8090/trabajador/";
 
-export default class BDUser{
-     URL = "http://localhost:8090/user/";
+    getAll() {
+        return fetch(this.URL);
+    }
 
-     getAll(){
-         return axios.get(this.URL);
-     }
+    save(user) {
+        return fetch(this.URL, {
+            method: "POST", // or 'PUT'
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+        })
+    }
 
-     save(user){
-        return axios.post(this.URL, user);
-     }
+    upDate(id, user) {
+        return fetch(this.URL + id, {
+            method: "PUT", // or 'POST'
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+        })
+    }
+
+    delete(id){
+        fetch(this.URL+id,{
+            method: "DELETE"
+        })
+    }
+
+
 }
