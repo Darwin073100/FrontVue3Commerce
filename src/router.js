@@ -5,6 +5,7 @@ import Registro from '@/views/user/ViewRegistro';
 import Error from '@/views/error/ViewError.vue';
 import Producto from '@/views/admin/product/ViewProd';
 import LoginAdmin from '@/views/admin/login/ViewLoginAdmin';
+import Detalle from '@/views/producto/ViewDetalle';
 
 const routes = [
     {
@@ -37,6 +38,11 @@ const routes = [
         path: '/admin',
         name: 'ViewLoginAdmin',
         component: LoginAdmin
+    },
+    {
+        path: '/detalle',
+        name: 'ViewDetalle',
+        component: Detalle
     }
 ];
 

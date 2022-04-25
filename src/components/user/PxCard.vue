@@ -1,15 +1,16 @@
 <template>
-  <div class="col" v-for="p in productos" v-bind:key="p.id">
-    <div class="card m-2">
-      <div class="card-header">
+  <div class="col-md-4 col-lg-3 col-xl-3" v-for="p in productos" v-bind:key="p.id">
+    <div class="card m-2 border">
+      <div class="card-header bg-dark">
         <img src="./logo.png" :alt="p.nombre" />
+        <span class="bg-info">{{p.precio}} MXN$</span>
       </div>
-      <div class="card-body center">
+      <div class="card-body text-center bg-primary">
         <span class="h5">{{ p.nombre }}</span>
         <p>{{ p.descripcion }}</p>
       </div>
-      <div class="card-footer d-flex justify-content-center">
-        <input type="submit" value="Más Información" class="btn btn-primary" />
+      <div class="card-footer d-flex justify-content-center bg-dark">
+        <router-link to="detalle" class="btn btn-primary">Más Información</router-link>
       </div>
     </div>
   </div>
@@ -34,3 +35,9 @@ export default {
   },
 };
 </script>
+<style scoped>
+.border{
+  border: none;
+  box-shadow: 0 0 15px rgb(46, 46, 46);
+}
+</style>

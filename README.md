@@ -20,5 +20,10 @@ npm run build
 npm run lint
 ```
 
+### Instalation of the router
+```
+npm i vue-router@next
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

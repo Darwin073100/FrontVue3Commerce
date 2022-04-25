@@ -1,5 +1,5 @@
 export default class BDCliente {
-    URL = "http://localhost:8090/trabajador/";
+    URL = "http://localhost:8090/cliente/";
 
     getAll() {
         return fetch(this.URL);

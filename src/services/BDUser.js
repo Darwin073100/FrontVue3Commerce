@@ -1,5 +1,5 @@
 export default class BDUser {
-    URL = "http://localhost:8090/trabajador/";
+    URL = "http://localhost:8090/user/";
 
     getAll() {
         return fetch(this.URL);

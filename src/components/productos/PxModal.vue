@@ -111,10 +111,11 @@
               Salir
             </button>
             <input
-              type="submit"
+              type="button"
               class="btn btn-primary"
               v-on:click="save()"
               value="Guardar"
+              data-bs-dismiss="modal"
             />
           </div>
         </div>
