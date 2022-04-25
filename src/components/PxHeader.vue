@@ -2,7 +2,7 @@
 <header>
 <nav class="navbar navbar-expand-lg navbar-light bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img style="height: 3rem;" src="../assets/logo/log-name.svg" alt=""></a>
+    <router-link class="navbar-brand" to="/" ><img style="height: 3rem;" src="../assets/logo/log-name.svg" alt=""></router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
