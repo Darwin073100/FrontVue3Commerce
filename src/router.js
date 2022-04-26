@@ -25,7 +25,7 @@ const routes = [
         component: Registro
     },
     {
-        path: '/**',
+        path: '/:pathMatch(.*)*',
         name: 'ViewError',
         component: Error
     },
@@ -40,7 +40,7 @@ const routes = [
         component: LoginAdmin
     },
     {
-        path: '/detalle',
+        path: '/detalle/:id',
         name: 'ViewDetalle',
         component: Detalle
     }

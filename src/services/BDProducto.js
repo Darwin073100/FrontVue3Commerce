@@ -4,6 +4,10 @@ export default class BDProducto {
     getAll() {
         return fetch(this.URL);
     }
+    
+    getOne(id) {
+        return fetch(this.URL+id);
+    }
 
     save(producto) {
         return fetch(this.URL, {

@@ -16,7 +16,7 @@
             <p>{{ p.descripcion }}</p>
           </div>
           <div class="card-footer d-flex justify-content-center bg-dark">
-            <router-link to="detalle" class="btn btn-primary"
+            <router-link to="/detalle/01" class="btn btn-primary"
               >Más Información</router-link
             >
           </div>
@@ -39,7 +39,7 @@
             <p>{{ p.descripcion }}</p>
           </div>
           <div class="card-footer d-flex justify-content-center bg-dark">
-            <router-link to="detalle" class="btn btn-primary"
+            <router-link to="/detalle" class="btn btn-primary"
               >Más Información</router-link
             >
           </div>
@@ -62,7 +62,7 @@
             <p>{{ p.descripcion }}</p>
           </div>
           <div class="card-footer d-flex justify-content-center bg-dark">
-            <router-link to="detalle" class="btn btn-primary"
+            <router-link to="/detalle" class="btn btn-primary"
               >Más Información</router-link
             >
           </div>
@@ -76,7 +76,7 @@
       <div v-if="p.tipo == 'App Movil'" class="col-md-4 col-lg-3 col-xl-3">
         <div class="card m-2 border">
           <div class="card-header bg-dark">
-            <img src="./logo.png" :alt="p.nombre" />
+            <img src="../../assets/carousel1.png" :alt="p.nombre" />
             <br />
             <span class="bg-info">{{ p.precio }} MXN$</span>
           </div>
@@ -85,7 +85,7 @@
             <p>{{ p.descripcion }}</p>
           </div>
           <div class="card-footer d-flex justify-content-center bg-dark">
-            <router-link to="detalle" class="btn btn-primary"
+            <router-link to="/detalle" class="btn btn-primary"
               >Más Información</router-link
             >
           </div>
@@ -95,7 +95,7 @@
   </div>
 </template>
 <script>
-import BDProducto from "../../services/BDProducto";
+import BDProducto from "@/services/BDProducto";
 export default {
   name: "PxCard",
   data() {
