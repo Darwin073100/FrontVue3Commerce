@@ -62,8 +62,6 @@
                 id="txtEstado"
                 v-model="producto.estado"
               />
-              <label for="txtImagen">Imagen:</label>
-              <input class="form-control" type="file" id="txtImagen" />
               <label for="txtPrecio">Precio:</label>
               <input
                 class="form-control"
@@ -134,7 +132,6 @@ export default {
         nombre: null,
         tipo: null,
         estado: null,
-        imagen: this.id+'-Product.png',
         precio: null,
         consumo: null,
         fecha: null,

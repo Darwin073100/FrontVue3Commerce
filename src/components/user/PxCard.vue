@@ -1,9 +1,8 @@
 <template>
   <div v-if="tipo == 1" class="row">
-    <div v-for="p in productos" v-bind:key="p.id">
+    <div v-for="p in productos" v-bind:key="p.id" class="col-md-4 col-lg-3 col-xl-3">
       <div
         v-if="p.tipo == 'S. De Información'"
-        class="col-md-4 col-lg-3 col-xl-3"
       >
         <div class="card m-2 border">
           <div class="card-header bg-dark">
@@ -13,7 +12,6 @@
           </div>
           <div class="card-body text-center bg-primary">
             <span class="h5">{{ p.nombre }}</span>
-            <p>{{ p.descripcion }}</p>
           </div>
           <div class="card-footer d-flex justify-content-center bg-dark">
             <router-link to="/detalle/01" class="btn btn-primary"
